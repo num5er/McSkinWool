@@ -7,11 +7,15 @@ import com.num5er.tanwool.util.IHasModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
-public class BlockBase extends Block implements IHasModel
+public abstract class BlockBase extends Block implements IHasModel
 {
     public  BlockBase(String name, Material material)
     {
@@ -27,5 +31,9 @@ public class BlockBase extends Block implements IHasModel
     @Override
     public void registerModels() {
         Main.proxy.registerItemRender(Item.getItemFromBlock(this), 0, "inventory");
+    }
+
+    public float getPlayerRelativeBlockHardness(IBlockState state, EntityPlayer player, World world, BlockPos pos) {
+        return 0;
     }
 }
