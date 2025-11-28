@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+    {
+      "item": "minecraft:wool",
+      "data": 0
+    },
+    {
+      "item": "minecraft:wool",
+      "data": 0
+    },
+    {
+      "item": "minecraft:dye",
+      "data": 15
+    },
+    {
+      "item": "minecraft:dye",
+      "data": 3
+    }
+  ],
+
+  "result":
+  {
+    "item": "tanwool:tan_wool_block",
+    "count": 2
+  }
+}
