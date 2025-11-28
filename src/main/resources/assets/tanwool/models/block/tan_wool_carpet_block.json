@@ -1,0 +1,22 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "tanwool:blocks/tan_wool_carpet_block",
+    "top": "tanwool:blocks/tan_wool_carpet_block",
+    "side": "tanwool:blocks/tan_wool_carpet_block"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 1, 16],
+      "faces": {
+        "down":  { "texture": "#bottom" },
+        "up":    { "texture": "#top" },
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "west":  { "texture": "#side" },
+        "east":  { "texture": "#side" }
+      }
+    }
+  ]
+}

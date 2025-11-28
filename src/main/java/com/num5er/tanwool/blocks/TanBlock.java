@@ -24,8 +24,8 @@ public class TanBlock extends BlockBase implements IShearable {
         setSoundType(SoundType.CLOTH);
         setHardness(0.8f);
         //setResistance(0.8f);
-        setHarvestLevel("shears", 0); //Does not work.
-        setLightLevel(0);
+        //setHarvestLevel("shears", 0); //Does not work.
+        //setLightLevel(0);
         //setLightOpacity(0);
         //setBlockUnbreakable()
 
@@ -42,23 +42,15 @@ public class TanBlock extends BlockBase implements IShearable {
         return Collections.singletonList(new ItemStack(ModBlocks.TAN_WOOL_BLOCK));
     }
 
-
+    @Override
     public float getPlayerRelativeBlockHardness(IBlockState state, EntityPlayer player, World world, BlockPos pos) {
 
         ItemStack held = player.getHeldItemMainhand();
 
-        // Check if holding shears
-        if (held.getItem() instanceof ItemShears) {
+        // Holding shears
+        if (held.getItem() instanceof ItemShears) { return 0.2F; }
 
-            // Return a high break speed - the higher the value, the faster it breaks.
-            // For reference:
-            //   stone with pickaxe ≈ 0.2F
-            //   instant break = 1.0F
-            //   wool with shears would be around 0.3F to 0.4F
-            return 0.2F;
-        }
-
+        // Not holding shears
         return .05f;
     }
-
 }

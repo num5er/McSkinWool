@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+  [
+    "WW"
+  ],
+
+  "key":
+  {
+    "W":
+    {
+      "item": "tanwool:tan_wool_block"
+    }
+  },
+
+  "result":
+  {
+    "item": "tanwool:tan_wool_carpet_block",
+    "count": 3
+  }
+}

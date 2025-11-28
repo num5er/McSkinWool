@@ -33,6 +33,7 @@ public abstract class BlockBase extends Block implements IHasModel
         Main.proxy.registerItemRender(Item.getItemFromBlock(this), 0, "inventory");
     }
 
+    @Override
     public float getPlayerRelativeBlockHardness(IBlockState state, EntityPlayer player, World world, BlockPos pos) {
         return 0;
     }
